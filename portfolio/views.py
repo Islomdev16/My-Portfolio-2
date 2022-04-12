@@ -12,6 +12,8 @@ def index(request):
 
     return render(request, 'index.html')
 
+def contact(request):
+    return render(request, 'index.html')
 
 # def download(request, path):
 #     file_path = os.path.join(settings.MEDIA_ROOT, path)
