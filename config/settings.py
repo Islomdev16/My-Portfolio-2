@@ -1,3 +1,4 @@
+from curses.ascii import EM
 import os
 from pathlib import Path
 
@@ -9,7 +10,7 @@ SECRET_KEY = 'django-insecure-l7^$8hf+@!xtnskgyz9w2u4sa%g^^nu@^&=s-q&qdn88udf8-%
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -103,3 +104,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'iabdurahmonov1604@gmail.com'
+EMAIL_HOST_PASSWORD = 'tyudorasdf124'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
